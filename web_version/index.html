@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPU Scheduling Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header-container">
+        <h1>CPU Scheduling Simulator (SJF vs Priority)</h1>
+        <p class="note">*Note: A lower priority number means higher urgency (e.g., 1 is VIP).</p>
+    </div>
+
+    <div class="scenarios-container">
+        <h3>⚡ Quick Test Scenarios</h3>
+        <div class="scenarios-grid">
+            <button class="btn btn-secondary" onclick="loadScenario('A')">Scenario A (Preemption)</button>
+            <button class="btn btn-secondary" onclick="loadScenario('B')">Scenario B (Conflict)</button>
+            <button class="btn btn-secondary" onclick="loadScenario('C')">Scenario C (Starvation)</button>
+            <button class="btn btn-secondary" onclick="loadScenario('D')">Scenario D (Validation)</button>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="main-container">
+        <!-- Left Column: Input -->
+        <div class="input-column">
+            <div class="form-card">
+                <h2>1. Input Process</h2>
+                <form id="process-form">
+                    <label>Process ID</label>
+                    <input type="text" id="p_id" placeholder="e.g. P1">
+
+                    <label>Arrival Time</label>
+                    <input type="text" id="arr_time" value="0">
+
+                    <label>Burst Time</label>
+                    <input type="text" id="burst_time" value="1">
+
+                    <label>Priority</label>
+                    <input type="text" id="priority" value="1">
+                    
+                    <button type="submit" class="btn btn-primary btn-full">Add Process</button>
+                    <button type="button" id="clear-btn" class="btn btn-secondary btn-full" style="margin-top: 10px;">Clear All Table</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Right Column: Table -->
+        <div class="output-column">
+            <h2>2. Processes Table</h2>
+            <div class="table-container">
+                <table id="process-table">
+                    <thead>
+                        <tr>
+                            <th>Process ID</th>
+                            <th>Arrival Time</th>
+                            <th>Burst Time</th>
+                            <th>Priority</th>
+                        </tr>
+                    </thead>
+                    <tbody id="process-table-body"></tbody>
+                </table>
+                <p id="table-placeholder">No processes added yet. Use quick scenarios or add manually.</p>
+            </div>
+            
+            <button id="compare-btn" class="btn btn-success btn-large">COMPARE ALL ALGORITHMS</button>
+        </div>
+    </div>
+
+    <!-- Results Section -->
+    <div id="results-container" class="hidden"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

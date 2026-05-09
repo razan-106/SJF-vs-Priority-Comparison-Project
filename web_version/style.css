@@ -1,0 +1,53 @@
+body {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    margin: 0;
+    padding: 20px;
+}
+
+.header-container { text-align: center; margin-bottom: 20px; }
+h1 { color: #58a6ff; margin-bottom: 5px; }
+.note { color: #8b949e; font-style: italic; font-size: 14px; }
+
+.scenarios-container {
+    background: #161b22;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #30363d;
+    margin-bottom: 20px;
+}
+.scenarios-grid { display: flex; gap: 10px; }
+
+.main-container { display: flex; gap: 20px; align-items: flex-start; }
+.input-column { flex: 1; min-width: 300px; }
+.output-column { flex: 2; }
+
+.form-card { background: #161b22; padding: 20px; border-radius: 8px; border: 1px solid #30363d; }
+label { display: block; margin-top: 10px; font-weight: bold; font-size: 14px; }
+input { width: 100%; padding: 8px; margin-top: 5px; background: #0d1117; border: 1px solid #30363d; border-radius: 5px; color: white; box-sizing: border-box; }
+
+.btn { padding: 10px; border-radius: 6px; cursor: pointer; border: none; font-weight: bold; transition: 0.2s; }
+.btn-primary { background: #238636; color: white; }
+.btn-success { background: #1f6feb; color: white; width: 100%; margin-top: 15px; font-size: 18px; }
+.btn-secondary { background: #21262d; color: #c9d1d9; border: 1px solid #30363d; }
+.btn-full { width: 100%; margin-top: 10px; }
+
+.table-container { border: 1px solid #30363d; border-radius: 6px; margin-top: 10px; background: #161b22; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 10px; border-bottom: 1px solid #30363d; text-align: center; }
+thead { background: #0d1117; color: #58a6ff; }
+
+.result-section { background: #161b22; padding: 20px; border-radius: 8px; border: 1px solid #30363d; margin-top: 20px; }
+.averages { background: #0d1117; padding: 10px; border-radius: 5px; border-left: 5px solid #58a6ff; margin-top: 10px; font-weight: bold; }
+
+.gantt-container { margin: 15px 0; background: #0d1117; padding: 10px; border-radius: 5px; }
+.gantt-row { display: flex; align-items: center; margin-bottom: 5px; }
+.gantt-label { width: 50px; font-weight: bold; font-size: 12px; }
+.gantt-chart { flex: 1; height: 30px; background: #21262d; position: relative; border-radius: 3px; overflow: hidden; }
+.gantt-bar { position: absolute; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 11px; color: white; font-weight: bold; text-shadow: 1px 1px 2px black; }
+
+.summary-table { background: #161b22; width: 100%; margin-top: 10px; border: 1px solid #58a6ff; }
+.conclusion-box { background: #0d1117; padding: 15px; border-radius: 8px; border: 1px solid #30363d; line-height: 1.6; }
+
+.hidden { display: none; }
